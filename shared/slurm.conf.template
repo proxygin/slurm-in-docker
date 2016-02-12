@@ -1,0 +1,24 @@
+ClusterName=DockerTest
+ControlMachine = slurmctld
+MailProg=/bin/false
+
+ProctrackType=proctrack/linuxproc
+ReturnToService=1
+SlurmctldPidFile=/var/run/slurm/slurmctld.pid
+SlurmctldPort=6811-6818
+SlurmctldDebug=5
+SlurmdPidFile=/var/run/slurm/slurmd.pid
+SlurmdSpoolDir=/var/spool/slurmd
+SlurmdDebug=2
+SlurmUser=slurm
+StateSaveLocation=/var/spool/slurmctld
+SwitchType=switch/none
+
+# Accounting is enabled, uses a slurmdbd for storage and enforces that every
+# user/job has an associated account
+AccountingStorageType=accounting_storage/slurmdbd
+AccountingStorageHost=slurmdbd
+AccountingStorageEnforce=associations,limits,qos
+
+# COMPUTE NODES
+NodeName=DEFAULT State=UNKNOWN Boards=1 CoresPerSocket=2 RealMemory=4096
