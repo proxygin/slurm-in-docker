@@ -9,8 +9,6 @@ $ ./build.sh
 $ ./run.sh
 ```
 
-But wait. There is more! 
-
 ## Running stuff
 
 Use the users Alice and Bob to run jobs, test accounting and the queue system.
