@@ -13,7 +13,7 @@
 # options. Using a good old bash pipeline instead
 docker ps | awk '{print $2}' | grep -q mgood/resolvable
 DNS_RUNNING=$?
-if (( ! $DNS_RUNNING )); then
+if  [ !$DNS_RUNNING ]; then
    echo "SLURM requires DNS between all containers. The docker image"
    echo "mgood/resolvable can do this for you.  The container requires access"
    echo "to the docker.socket to listen for container start events."
